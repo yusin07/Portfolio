@@ -37,25 +37,25 @@
                     </div>
                     <ul
                         id="tab"
-                        class="order-last flex w-full rounded-lg bg-zinc-100 p-1 text-zinc-400 sm:order-2 sm:w-fit sm:p-2">
+                        class="order-last flex w-full rounded bg-zinc-100 p-1 text-zinc-400 sm:order-2 sm:w-fit sm:rounded-lg sm:p-2">
                         <li class="w-1/3 sm:w-fit">
                             <a
                                 href="#landing"
-                                class="w-full rounded bg-primary py-1 px-3 font-medium leading-none text-white">
+                                class="block w-full rounded bg-primary py-1 px-3 text-center font-medium leading-none text-white">
                                 Landing
                             </a>
                         </li>
                         <li class="w-1/3 sm:w-fit">
                             <a
                                 href="#portfolio"
-                                class="w-full rounded py-1 px-3 font-medium leading-none hover:bg-zinc-200">
+                                class="block w-full rounded py-1 px-3 text-center font-medium leading-none hover:bg-zinc-200">
                                 Portfolio
                             </a>
                         </li>
                         <li class="w-1/3 sm:w-fit">
                             <a
                                 href="#experience"
-                                class="w-full rounded py-1 px-3 font-medium leading-none hover:bg-zinc-200">
+                                class="block w-full rounded py-1 px-3 text-center font-medium leading-none hover:bg-zinc-200">
                                 Experience
                             </a>
                         </li>
@@ -91,7 +91,7 @@
         <section
             id="landing"
             style="background-image: url('./asset/bg.png')"
-            class="bg-cover bg-fixed bg-no-repeat pt-[120px] sm:pt-20">
+            class="overflow-hidden bg-cover bg-fixed bg-no-repeat pt-[120px] sm:pt-20">
             <div
                 class="mx-auto max-w-screen-2xl px-4 pb-20 sm:px-8 md:px-12 md:pb-32">
                 <div
@@ -657,7 +657,7 @@
                 </div>
             </div>
         </div>
-        <section id="experience" class="bg-zinc-900">
+        <section id="experience" class="overflow-hidden bg-zinc-900">
             <div
                 class="bg-transparent bg-cover bg-center bg-no-repeat"
                 style="background-image: url('./asset/bg2.png')">
@@ -681,7 +681,7 @@
                         </div>
                         <div class="mt-32 flex flex-col gap-y-20 md:gap-y-0">
                             <div
-                                class="relative w-full flex-grow self-end md:w-[calc(50%-24px)]"
+                                class="relative w-full self-end md:w-[calc(50%-24px)]"
                                 data-aos="fade-left">
                                 <div
                                     class="relative z-10 rounded-lg border-2 border-white/5 bg-gradient-to-br from-white/5 to-white/10 p-6 text-white shadow-xl backdrop-blur">
@@ -868,23 +868,21 @@
         <footer class="bg-black">
             <div
                 class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 py-6 sm:px-8 md:px-12">
-                <div>
-                    <div>
-                        <p
-                            class="mr-4 inline-block border-r border-white pr-4 text-sm text-white/75">
-                            Copyright © Design by Yu Sin, 2022
-                        </p>
-                        <a
-                            href="mailto: sin70305@gmail.com"
-                            class="mr-4 rounded bg-white/10 py-1 px-2 text-sm text-white hover:text-primary"
-                            >Contact Me</a
-                        >
-                        <a
-                            href="https://github.com/yusin07/Portfolio"
-                            class="rounded bg-white/10 py-1 px-2 text-sm text-white hover:text-primary"
-                            >Check Repo</a
-                        >
-                    </div>
+                <div class="flex items-center gap-4">
+                    <p
+                        class="text-sm text-white/75 md:border-r md:border-white md:pr-4">
+                        © Design by Yu Sin, 2022
+                    </p>
+                    <a
+                        href="mailto: sin70305@gmail.com"
+                        class="hidden whitespace-nowrap rounded bg-white/10 py-1 px-2 text-sm text-white hover:text-primary sm:block"
+                        >Contact Me</a
+                    >
+                    <a
+                        href="https://github.com/yusin07/Portfolio"
+                        class="hidden whitespace-nowrap rounded bg-white/10 py-1 px-2 text-sm text-white hover:text-primary sm:block"
+                        >Check Repo</a
+                    >
                 </div>
                 <img
                     src="./asset/tailwind-css.svg"
