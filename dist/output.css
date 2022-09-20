@@ -1157,10 +1157,6 @@ a,
   background-attachment: fixed;
 }
 
-.bg-scroll {
-  background-attachment: scroll;
-}
-
 .bg-center {
   background-position: center;
 }
