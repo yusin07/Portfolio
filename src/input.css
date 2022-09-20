@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a,
+    i,
+    button {
+        @apply transition-all ease-out;
+    }
+}
+
+.swiper-pagination-bullet {
+    @apply mx-4 bg-zinc-200 opacity-100;
+}
+.swiper-pagination-bullet-active {
+    @apply bg-sky-500;
+}
