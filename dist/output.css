@@ -746,10 +746,6 @@ a,
   height: 16px;
 }
 
-.min-h-\[320px\] {
-  min-height: 320px;
-}
-
 .min-h-\[360px\] {
   min-height: 360px;
 }
@@ -1161,6 +1157,10 @@ a,
   background-attachment: fixed;
 }
 
+.bg-scroll {
+  background-attachment: scroll;
+}
+
 .bg-center {
   background-position: center;
 }
@@ -1249,8 +1249,8 @@ a,
   padding-right: 0.5rem;
 }
 
-.pt-\[120px\] {
-  padding-top: 120px;
+.pt-\[112px\] {
+  padding-top: 112px;
 }
 
 .pb-20 {
