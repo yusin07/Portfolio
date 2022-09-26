@@ -51,73 +51,32 @@ function navHighlighter() {
     });
 }
 
-// Get the modal
-const zkGuideModal = document.getElementById("zkGuideModal");
+function modalFunction(openId, closeId, targetId) {
+    const openElement = document.getElementById(openId);
+    const closeElement = document.getElementById(closeId);
+    const modalElement = document.getElementById(targetId);
+    const modalElementChidren = modalElement.children[0];
 
-// Get the button that opens the modal
-const zkGuideBtn = document.getElementById("zkGuideBtn");
+    openElement.onclick = function () {
+        modalElement.style.display = "block";
+    };
 
-// Get the <span> element that closes the modal
-const zkGuideX = document.getElementById("zkGuideX");
+    closeElement.onclick = function () {
+        modalElement.style.display = "none";
+    };
 
-// When the user clicks on the button, open the modal
-zkGuideBtn.onclick = function () {
-    zkGuideModal.style.display = "block";
-};
+    modalElement.onclick = function () {
+        modalElement.style.display = "none";
+    };
 
-// When the user clicks on <span> (x), close the modal
-zkGuideX.onclick = function () {
-    zkGuideModal.style.display = "none";
-};
+    modalElementChidren.onclick = function (event) {
+        event.stopPropagation();
+    };
+}
 
-// Get the modal
-const zkWebModal = document.getElementById("zkWebModal");
-
-// Get the button that opens the modal
-const zkWebBtn = document.getElementById("zkWebBtn");
-
-// Get the <span> element that closes the modal
-const zkWebX = document.getElementById("zkWebX");
-
-// When the user clicks on the button, open the modal
-zkWebBtn.onclick = function () {
-    zkWebModal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-zkWebX.onclick = function () {
-    zkWebModal.style.display = "none";
-};
-
-// Get the modal
-const quireModal = document.getElementById("quireModal");
-
-// Get the button that opens the modal
-const quireBtn = document.getElementById("quireBtn");
-
-// Get the <span> element that closes the modal
-const quireX = document.getElementById("quireX");
-
-// When the user clicks on the button, open the modal
-quireBtn.onclick = function () {
-    quireModal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-quireX.onclick = function () {
-    quireModal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == zkWebModal) {
-        zkWebModal.style.display = "none";
-    } else if (event.target == zkGuideModal) {
-        zkGuideModal.style.display = "none";
-    } else if (event.target == quireModal) {
-        quireModal.style.display = "none";
-    }
-};
+modalFunction("zkGuideBtn", "zkGuideX", "zkGuideModal");
+modalFunction("zkWebBtn", "zkWebX", "zkWebModal");
+modalFunction("quireBtn", "quireX", "quireModal");
 
 AOS.init();
 
